@@ -3,8 +3,8 @@
 
 TARGET=bin/libSampSharp.so
 
-CC=gcc
-CXX=g++
+CC=gcc-9
+CXX=g++-9
 
 SRCDIR=src/SampSharp
 BINDIR=bin

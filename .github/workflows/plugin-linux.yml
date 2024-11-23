@@ -20,7 +20,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v2
@@ -28,10 +28,9 @@ jobs:
       - name: Install deps
         run: |
           sudo apt-get update -y -qq
-          sudo apt-get upgrade -y -qq gcc g++
-          sudo apt-get install -y -qq gcc-multilib g++-multilib
-          gcc --version
-          g++ --version
+          sudo apt-get upgrade -y gcc-9 g++-9 gcc-9-multilib g++-9-multilib
+          gcc-9 --version
+          g++-9 --version
 
       - name: Build plugin
         run: make
