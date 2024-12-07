@@ -27,8 +27,8 @@ jobs:
 
       - name: Install deps
         run: |
-          sudo apt-get update -y -qq
-          sudo apt-get upgrade -y gcc-9 g++-9 gcc-9-multilib g++-9-multilib
+          apt-get update -y -qq
+          apt-get upgrade -y gcc-9 g++-9 gcc-9-multilib g++-9-multilib
           gcc-9 --version
           g++-9 --version
 
