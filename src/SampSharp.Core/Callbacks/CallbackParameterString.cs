@@ -51,6 +51,6 @@ internal class CallbackParameterString : ICallbackParameter
             buf = buf[..^1];
         }
 
-        return Encoding.ASCII.GetString(buf);
+        return Encoding.GetEncoding(1252).GetString(buf);
     }
 }
